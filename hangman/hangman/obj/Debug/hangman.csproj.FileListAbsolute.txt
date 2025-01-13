@@ -1,0 +1,10 @@
+D:\Szabó Barnabás\hangman\hangman\bin\Debug\hangman.exe.config
+D:\Szabó Barnabás\hangman\hangman\bin\Debug\hangman.exe
+D:\Szabó Barnabás\hangman\hangman\bin\Debug\hangman.pdb
+D:\Szabó Barnabás\hangman\hangman\obj\Debug\hangman.csproj.AssemblyReference.cache
+D:\Szabó Barnabás\hangman\hangman\obj\Debug\hangman.Form1.resources
+D:\Szabó Barnabás\hangman\hangman\obj\Debug\hangman.Properties.Resources.resources
+D:\Szabó Barnabás\hangman\hangman\obj\Debug\hangman.csproj.GenerateResource.cache
+D:\Szabó Barnabás\hangman\hangman\obj\Debug\hangman.csproj.CoreCompileInputs.cache
+D:\Szabó Barnabás\hangman\hangman\obj\Debug\hangman.exe
+D:\Szabó Barnabás\hangman\hangman\obj\Debug\hangman.pdb
