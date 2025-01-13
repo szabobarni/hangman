@@ -22,6 +22,19 @@ namespace hangman
             width = 800;
             Size = new Size(width, height);
         }
+        private void game()
+        {
+            label1.Text = "TALÁLJA KI!";
+            label1.AutoSize = false;
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Location = new Point(150, 10);
+            this.Controls.Remove(button1);
+            this.Controls.Remove(button2);
+            this.Controls.Remove(button3);
+            this.Controls.Remove(button4);
+            this.Controls.Remove(button5);
+            this.Controls.Remove(button6);
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -31,7 +44,9 @@ namespace hangman
             {
                 string[] lines = File.ReadAllLines(textFile);
                 string chosen = lines[rnd.Next(0,lines.Length)];
-                //MessageBox.Show(chosen);
+                int length = chosen.Length;
+                game();
+                //MessageBox.Show(chosen+length);
             }
         }
 
@@ -43,6 +58,7 @@ namespace hangman
             {
                 string[] lines = File.ReadAllLines(textFile);
                 string chosen = lines[rnd.Next(0, lines.Length)];
+                int length = chosen.Length;
                 //MessageBox.Show(chosen);
             }
         }
@@ -55,6 +71,7 @@ namespace hangman
             {
                 string[] lines = File.ReadAllLines(textFile);
                 string chosen = lines[rnd.Next(0, lines.Length)];
+                int length = chosen.Length;
                 //MessageBox.Show(chosen);
             }
         }
@@ -67,6 +84,7 @@ namespace hangman
             {
                 string[] lines = File.ReadAllLines(textFile);
                 string chosen = lines[rnd.Next(0, lines.Length)];
+                int length = chosen.Length;
                 //MessageBox.Show(chosen);
             }
         }
@@ -79,6 +97,7 @@ namespace hangman
             {
                 string[] lines = File.ReadAllLines(textFile);
                 string chosen = lines[rnd.Next(0, lines.Length)];
+                int length = chosen.Length;
                 //MessageBox.Show(chosen);
             }
         }
@@ -91,6 +110,7 @@ namespace hangman
             {
                 string[] lines = File.ReadAllLines(textFile);
                 string chosen = lines[rnd.Next(0, lines.Length)];
+                int length = chosen.Length;
                 //MessageBox.Show(chosen);
             }
         }
