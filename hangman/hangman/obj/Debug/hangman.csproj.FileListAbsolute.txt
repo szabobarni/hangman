@@ -8,3 +8,13 @@ D:\Szabó Barnabás\hangman\hangman\obj\Debug\hangman.csproj.GenerateResource.ca
 D:\Szabó Barnabás\hangman\hangman\obj\Debug\hangman.csproj.CoreCompileInputs.cache
 D:\Szabó Barnabás\hangman\hangman\obj\Debug\hangman.exe
 D:\Szabó Barnabás\hangman\hangman\obj\Debug\hangman.pdb
+D:\Szabo Barnabas 11.i\hangman\hangman\hangman\bin\Debug\hangman.exe.config
+D:\Szabo Barnabas 11.i\hangman\hangman\hangman\bin\Debug\hangman.exe
+D:\Szabo Barnabas 11.i\hangman\hangman\hangman\bin\Debug\hangman.pdb
+D:\Szabo Barnabas 11.i\hangman\hangman\hangman\obj\Debug\hangman.csproj.AssemblyReference.cache
+D:\Szabo Barnabas 11.i\hangman\hangman\hangman\obj\Debug\hangman.Form1.resources
+D:\Szabo Barnabas 11.i\hangman\hangman\hangman\obj\Debug\hangman.Properties.Resources.resources
+D:\Szabo Barnabas 11.i\hangman\hangman\hangman\obj\Debug\hangman.csproj.GenerateResource.cache
+D:\Szabo Barnabas 11.i\hangman\hangman\hangman\obj\Debug\hangman.csproj.CoreCompileInputs.cache
+D:\Szabo Barnabas 11.i\hangman\hangman\hangman\obj\Debug\hangman.exe
+D:\Szabo Barnabas 11.i\hangman\hangman\hangman\obj\Debug\hangman.pdb
