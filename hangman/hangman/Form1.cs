@@ -49,6 +49,7 @@ namespace hangman
                 char[] letters = chosen.ToUpper().ToCharArray();
                 game(letters);
                 MessageBox.Show(chosen);
+                word_to_be_guessed(chosen);
             }
         }
 
@@ -60,9 +61,10 @@ namespace hangman
             {
                 string[] lines = File.ReadAllLines(textFile);
                 string chosen = lines[rnd.Next(0, lines.Length)];
-                char[] letters = chosen.ToCharArray();
+                char[] letters = chosen.ToUpper().ToCharArray();
                 game(letters);
-                //MessageBox.Show(chosen);
+                MessageBox.Show(chosen);
+                word_to_be_guessed(chosen);
             }
         }
 
@@ -75,8 +77,9 @@ namespace hangman
                 string[] lines = File.ReadAllLines(textFile);
                 string chosen = lines[rnd.Next(0, lines.Length)];
                 int length = chosen.Length;
-                char[] letters = chosen.ToCharArray();
+                char[] letters = chosen.ToUpper().ToCharArray();
                 game(letters);
+                word_to_be_guessed(chosen);
             }
         }
 
@@ -89,8 +92,9 @@ namespace hangman
                 string[] lines = File.ReadAllLines(textFile);
                 string chosen = lines[rnd.Next(0, lines.Length)];
                 int length = chosen.Length;
-                char[] letters = chosen.ToCharArray();
+                char[] letters = chosen.ToUpper().ToCharArray();
                 game(letters);
+                word_to_be_guessed(chosen);
             }
         }
 
@@ -103,9 +107,10 @@ namespace hangman
                 string[] lines = File.ReadAllLines(textFile);
                 string chosen = lines[rnd.Next(0, lines.Length)];
                 int length = chosen.Length;
-                char[] letters = chosen.ToCharArray();
+                char[] letters = chosen.ToUpper().ToCharArray();
                 game(letters);
                 //MessageBox.Show(chosen);
+                word_to_be_guessed(chosen);
             }
         }
 
@@ -118,10 +123,31 @@ namespace hangman
                 string[] lines = File.ReadAllLines(textFile);
                 string chosen = lines[rnd.Next(0, lines.Length)];
                 int length = chosen.Length;
-                char[] letters = chosen.ToCharArray();
+                char[] letters = chosen.ToUpper().ToCharArray();
                 game(letters);
-                //MessageBox.Show(chosen);
+                MessageBox.Show(chosen);
+                word_to_be_guessed(chosen);
             }
+        }
+
+        
+        private void word_to_be_guessed(string chosen)
+        {
+
+            char[] letters = chosen.ToUpper().ToCharArray();
+
+            for (int i = 0; i < chosen.Length; i++)
+            {
+                Label label_word = new Label();
+                label_word.Text = letters[i].ToString();
+                label_word.Size = new Size(50, 50);
+                label_word.Location = new Point(300+i*50, 200);
+                this.Controls.Add(label_word);
+            }
+            
+                
+            
+            
         }
         private void abc(char[] letters)
         {
@@ -150,6 +176,7 @@ namespace hangman
                     {
                         MessageBox.Show("jo");
                         this.Controls.Remove(button);
+                        
                     }
                     else
                     {

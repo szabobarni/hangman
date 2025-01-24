@@ -18,3 +18,13 @@ D:\Szabo Barnabas 11.i\hangman\hangman\hangman\obj\Debug\hangman.csproj.Generate
 D:\Szabo Barnabas 11.i\hangman\hangman\hangman\obj\Debug\hangman.csproj.CoreCompileInputs.cache
 D:\Szabo Barnabas 11.i\hangman\hangman\hangman\obj\Debug\hangman.exe
 D:\Szabo Barnabas 11.i\hangman\hangman\hangman\obj\Debug\hangman.pdb
+C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\bin\Debug\hangman.exe.config
+C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\bin\Debug\hangman.exe
+C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\bin\Debug\hangman.pdb
+C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\obj\Debug\hangman.csproj.AssemblyReference.cache
+C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\obj\Debug\hangman.Form1.resources
+C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\obj\Debug\hangman.Properties.Resources.resources
+C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\obj\Debug\hangman.csproj.GenerateResource.cache
+C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\obj\Debug\hangman.csproj.CoreCompileInputs.cache
+C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\obj\Debug\hangman.exe
+C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\obj\Debug\hangman.pdb
