@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace hangman
 {
@@ -15,13 +16,41 @@ namespace hangman
     {
         Random rnd = new Random();
         int height, width;
+
+        int wrongGuesses = 0;
+        PictureBox hangmanPictureBox = new PictureBox();
+        
+
         public Form1()
         {
             InitializeComponent();
-            height = 500;
-            width = 800;
+            height = 1000; 
+            width = 1000;
             Size = new Size(width, height);
+            
+            hangmanPictureBox.Size = new Size(300, 300); 
+            hangmanPictureBox.Location = new Point((width - hangmanPictureBox.Width) / 2, 700); 
+            hangmanPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            this.Controls.Add(hangmanPictureBox);
+
+            UpdateHangmanImage();
         }
+
+        private void UpdateHangmanImage()
+        {
+            string imagePath = $"{wrongGuesses}.png"; 
+
+            if (File.Exists(imagePath))
+            {
+                hangmanPictureBox.Image = Image.FromFile(imagePath); 
+            }
+            else
+            {
+                hangmanPictureBox.Image = null; 
+            }
+        }
+
+
         private void game(char[] letters)
         {
             label1.Text = "TALÁLJA KI!";
@@ -48,7 +77,7 @@ namespace hangman
                 int length = chosen.Length;
                 char[] letters = chosen.ToUpper().ToCharArray();
                 game(letters);
-                MessageBox.Show(chosen);
+                //MessageBox.Show(chosen);
                 word_to_be_guessed(chosen);
             }
         }
@@ -63,7 +92,7 @@ namespace hangman
                 string chosen = lines[rnd.Next(0, lines.Length)];
                 char[] letters = chosen.ToUpper().ToCharArray();
                 game(letters);
-                MessageBox.Show(chosen);
+                //MessageBox.Show(chosen);
                 word_to_be_guessed(chosen);
             }
         }
@@ -79,6 +108,7 @@ namespace hangman
                 int length = chosen.Length;
                 char[] letters = chosen.ToUpper().ToCharArray();
                 game(letters);
+                //MessageBox.Show(chosen);
                 word_to_be_guessed(chosen);
             }
         }
@@ -94,6 +124,7 @@ namespace hangman
                 int length = chosen.Length;
                 char[] letters = chosen.ToUpper().ToCharArray();
                 game(letters);
+                //MessageBox.Show(chosen);
                 word_to_be_guessed(chosen);
             }
         }
@@ -125,30 +156,45 @@ namespace hangman
                 int length = chosen.Length;
                 char[] letters = chosen.ToUpper().ToCharArray();
                 game(letters);
-                MessageBox.Show(chosen);
+                //MessageBox.Show(chosen);
                 word_to_be_guessed(chosen);
             }
         }
 
-        
+        List<Label> labels = new List<Label>();
+
         private void word_to_be_guessed(string chosen)
         {
-
             char[] letters = chosen.ToUpper().ToCharArray();
+            int startX = 300; 
+            int startY = 200; 
+            int spacing = 50; 
 
-            for (int i = 0; i < chosen.Length; i++)
+            
+            foreach (var label in labels)
             {
-                Label label_word = new Label();
-                label_word.Text = letters[i].ToString();
-                label_word.Size = new Size(50, 50);
-                label_word.Location = new Point(300+i*50, 200);
-                this.Controls.Add(label_word);
+                this.Controls.Remove(label);
             }
+            labels.Clear();
+
             
-                
-            
-            
+            for (int i = 0; i < letters.Length; i++)
+            {
+                Label label = new Label();
+                label.Text = "_"; 
+                label.Tag = letters[i]; 
+                label.Size = new Size(40, 50);
+                label.Location = new Point(startX + i * spacing, startY);
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.Font = new Font("Arial", 16, FontStyle.Bold);
+                this.Controls.Add(label);
+                labels.Add(label);
+            }
         }
+
+        public int tips = 0;
+        public int correct_guesses = 0;
+
         private void abc(char[] letters)
         {
             string[] abc = {
@@ -171,18 +217,42 @@ namespace hangman
                 button.Location = new Point(x, 250+y);
                 button.Click += (sender, e) =>
                 {
-                    char a = char.Parse(letter);
-                    if (letters.Contains(a))
+                    char guessedLetter = char.Parse(letter);
+
+                    
+                    if (letters.Contains(guessedLetter))
                     {
-                        MessageBox.Show("jo");
-                        this.Controls.Remove(button);
+                        correct_guesses++;
+                        tips++;
+                        MessageBox.Show("Talált!");
+
                         
+                        for (int i = 0; i < letters.Length; i++)
+                        {
+                            if (letters[i] == guessedLetter)
+                            {
+                                labels[i].Text = guessedLetter.ToString(); 
+                            }
+                        }
+                        this.Controls.Remove(button);
+                        if (letters.Length == correct_guesses)
+                        {
+                            MessageBox.Show($"Kitaláltad! Próbálkozások: {tips}");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("rossz");
-                        this.Controls.Remove(button);
+                        wrongGuesses++;
+                        UpdateHangmanImage(); 
+                        tips++;
+                        MessageBox.Show("Nem talált!");
+                        if (wrongGuesses == 8)
+                        {
+                            MessageBox.Show($"Vesztettél!");
+                        }
+                        this.Controls.Remove(button);                    
                     }
+                    
                 };
 
                 this.Controls.Add(button);
@@ -198,3 +268,4 @@ namespace hangman
         }
     }
 }
+

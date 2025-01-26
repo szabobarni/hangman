@@ -28,3 +28,13 @@ C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\obj\Debug\hangman.csproj.
 C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\obj\Debug\hangman.csproj.CoreCompileInputs.cache
 C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\obj\Debug\hangman.exe
 C:\Users\D242TAN-09.SZERUSKERT\Desktop\hangman\hangman\obj\Debug\hangman.pdb
+C:\Users\harto\OneDrive\Asztali gép\hangman\hangman\bin\Debug\hangman.exe.config
+C:\Users\harto\OneDrive\Asztali gép\hangman\hangman\bin\Debug\hangman.exe
+C:\Users\harto\OneDrive\Asztali gép\hangman\hangman\bin\Debug\hangman.pdb
+C:\Users\harto\OneDrive\Asztali gép\hangman\hangman\obj\Debug\hangman.csproj.AssemblyReference.cache
+C:\Users\harto\OneDrive\Asztali gép\hangman\hangman\obj\Debug\hangman.Form1.resources
+C:\Users\harto\OneDrive\Asztali gép\hangman\hangman\obj\Debug\hangman.Properties.Resources.resources
+C:\Users\harto\OneDrive\Asztali gép\hangman\hangman\obj\Debug\hangman.csproj.GenerateResource.cache
+C:\Users\harto\OneDrive\Asztali gép\hangman\hangman\obj\Debug\hangman.csproj.CoreCompileInputs.cache
+C:\Users\harto\OneDrive\Asztali gép\hangman\hangman\obj\Debug\hangman.exe
+C:\Users\harto\OneDrive\Asztali gép\hangman\hangman\obj\Debug\hangman.pdb
