@@ -238,6 +238,7 @@ namespace hangman
                         if (letters.Length == correct_guesses)
                         {
                             MessageBox.Show($"Kitaláltad! Próbálkozások: {tips}");
+                            Application.Restart();
                         }
                     }
                     else
@@ -249,6 +250,8 @@ namespace hangman
                         if (wrongGuesses == 8)
                         {
                             MessageBox.Show($"Vesztettél!");
+                            Application.Restart();
+                            
                         }
                         this.Controls.Remove(button);                    
                     }

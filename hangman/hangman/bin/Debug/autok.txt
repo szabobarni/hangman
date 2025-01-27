@@ -1,6 +1,6 @@
 Toyota
 BMW
-Mercedes-Benz
+MercedesBenz
 Audi
 Ford
 Honda

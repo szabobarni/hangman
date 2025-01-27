@@ -1,6 +1,6 @@
 Nike
 Apple
-Coca-Cola
+CocaCola
 Samsung
 Adidas
 Toyota
